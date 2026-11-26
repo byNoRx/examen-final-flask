@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+div.main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+.main-button {
+    color: white;
+    border: none;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.main-button.pink {
+    background-color: #af0eaf;
+}
+
+.main-button.green {
+    background-color: #8ac720;
+}
