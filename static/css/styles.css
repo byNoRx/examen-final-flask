@@ -4,10 +4,12 @@
     padding: 0;
 }
 
-div.main {
+.main {
+    margin: 25px;
     display: flex;
-    flex-wrap: wrap;
-    margin: 5px;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
 }
 
 .main-button {
@@ -15,7 +17,7 @@ div.main {
     border: none;
     width: 100px;
     height: 100px;
-    margin: 5px;
+    cursor: pointer;
 }
 
 .main-button.pink {
@@ -24,4 +26,56 @@ div.main {
 
 .main-button.green {
     background-color: #8ac720;
+}
+
+h1, p {
+    color: #292e33;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}
+
+form {
+    margin: auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 500px;
+}
+
+.input-group label {
+    display: block;
+    color: dimgray;
+    text-align: center;
+}
+
+.input-group input {
+    border-color: #cecece;
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.button {
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #007afd;
+    color: white;
+    margin: auto;
+}
+
+.button:hover {
+    box-sizing: border-box;
+    background-color: #4499ff;
+    cursor: pointer;
 }

@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
 <form method="post">
     <h1>Inicio de sesión</h1>
 
-    <label for="nombre">Ingresa tu nombre</label><br>
-    <input id="nombre" name="nombre" type="text" value="{{ nombre }}" required><br>
+    <div class="input-group">
+        <label for="nombre">Ingresa tu nombre:</label>
+        <input id="nombre" name="nombre" type="text" value="{{ nombre }}" required>
+    </div>
 
-    <label for="contrasena">Ingresa tu contraseña</label><br>
-    <input id="contrasena" name="contrasena" type="password" value="{{ contrasena }}" required><br>
+    <div class="input-group">
+        <label for="contrasena">Ingresa tu contraseña:</label>
+        <input id="contrasena" name="contrasena" type="password" value="{{ contrasena }}" required>
+    </div>
 
-    <input type="submit" value="Verificar">
+    <input class="button" type="submit" value="Verificar">
+
+    <div class="info">
+        <p>{{ mensaje }}</p>
+    </div>
 </form>
-<p>{{ mensaje }}</p>
 </body>
 </html>

@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
 <form method="post">
     <h1>Cálculo de compras</h1>
 
-    <label for="nombre">Ingresa tu nombre</label><br>
-    <input id="nombre" name="nombre" type="text" value="{{ nombre }}" required><br>
+    <div class="input-group">
+        <label for="nombre">Ingresa tu nombre:</label>
+        <input id="nombre" name="nombre" type="text" value="{{ nombre }}" required>
+    </div>
 
-    <label for="edad">Ingresa tu edad</label><br>
-    <input id="edad" name="edad" type="number" value="{{ edad }}" min="0" required><br>
+    <div class="input-group">
+        <label for="edad">Ingresa tu edad:</label>
+        <input id="edad" name="edad" type="number" value="{{ edad }}" min="0" required>
+    </div>
 
-    <label for="tarros">Ingresa la cantidad de tarros de pintura a comprar</label><br>
-    <input id="tarros" name="tarros" type="number" value="{{ tarros }}" min="0" required><br>
+    <div class="input-group">
+        <label for="tarros">Ingresa la cantidad de tarros de pintura a comprar:</label>
+        <input id="tarros" name="tarros" type="number" value="{{ tarros }}" min="0" required>
+    </div>
 
-    <input type="submit" value="Calcular">
+    <input class="button" type="submit" value="Calcular">
+
+    <div class="info">
+        <p>{{ mensaje1 }}</p>
+        <p>{{ mensaje2 }}</p>
+        <p>{{ mensaje3 }}</p>
+        <p>{{ mensaje4 }}</p>
+    </div>
+
 </form>
-<p>{{ mensaje1 }}</p>
-<p>{{ mensaje2 }}</p>
-<p>{{ mensaje3 }}</p>
-<p>{{ mensaje4 }}</p>
 </body>
 </html>
