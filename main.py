@@ -30,10 +30,10 @@ def ejercicio1():
 
         precio_total_con_descuento = precio_total_sin_descuento - descuento
 
-        mensaje1 = f'Nombre del cliente: {nombre}'
-        mensaje2 = f'Total sin descuento: ${precio_total_sin_descuento}'
-        mensaje3 = f'El descuento es: ${descuento}'
-        mensaje4 = f'El total a pagar es: ${precio_total_con_descuento}'
+        mensaje1 = f'Nombre del cliente: {nombre}.'
+        mensaje2 = f'Total sin descuento: ${precio_total_sin_descuento}.'
+        mensaje3 = f'El descuento es: ${descuento}.'
+        mensaje4 = f'El total a pagar es: ${precio_total_con_descuento}.'
 
         return render_template(
             'ejercicio1.html',
@@ -50,6 +50,23 @@ def ejercicio1():
 
 @app.route('/ejercicio2', methods=['GET', 'POST'])
 def ejercicio2():
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        contrasena = request.form['contrasena']
+
+        mensaje = ''
+        if nombre == 'juan' and contrasena == 'admin':
+            mensaje = f'Bienvenido Administrador {nombre}.'
+        elif nombre == 'pepe' and contrasena == 'user':
+            mensaje = f'Bienvenido Usuario {nombre}.'
+        else:
+            mensaje = "Usuario o contraseña incorrectos."
+        return render_template(
+            'ejercicio2.html',
+            nombre=nombre,
+            contrasena=contrasena,
+            mensaje=mensaje
+        )
     return render_template('ejercicio2.html')
 
 
